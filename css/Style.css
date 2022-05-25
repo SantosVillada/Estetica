@@ -1,0 +1,806 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Index */
+
+li {
+    list-style: none;
+    display: inline;
+
+}
+
+h1 {
+    color: #f1c0e8;
+    font-family: "merriweather";
+    /* Grid */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-family: "merriweather";
+}
+
+p {
+    font-family: "roboto";
+    font-weight: 600;
+}
+
+.divConteiner {
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 60px 60px auto auto auto 50px;
+    grid-template-areas: "header header header"
+        "nav nav nav"
+        "mainp mainp mainp"
+        "mains mains mains"
+        "maint maint maint"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    background-color: #f8edeb;
+}
+
+.nav {
+    grid-area: nav;
+    padding-bottom: 15px;
+    background-color: #f8edeb;
+}
+
+.navFlex {
+    padding-top: 5px;
+    font-family: "roboto";
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.primeraParte {
+    grid-area: mainp;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 70px auto auto;
+    grid-template-areas: "texto texto texto"
+        "img img img"
+        ". box box";
+}
+
+.manicuraTextoTitulo {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px;
+
+    /* Grid */
+    grid-area: texto;
+    gap: 5px;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeraParte h2 {
+    width: fit-content;
+}
+
+.primeraParte p {
+    width: fit-content;
+}
+
+.imagenManicura {
+    margin-top: 25px;
+
+
+    /* Grid */
+    grid-area: img;
+}
+
+.imagenManicura img {
+    width: 100vw;
+    border-radius: 20px;
+}
+
+.formularioBox {
+    border: 2px solid black;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 8px;
+    text-align: center;
+    font-family: "roboto";
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.411);
+    background-color: #f1c0e8;
+    margin: 15px;
+
+    /* Grid */
+    grid-area: box;
+}
+
+.formularioBox a {
+    color: black;
+    text-decoration: none;
+}
+
+.segundaParteFlex .pedicuraTextoTitulo {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+
+    /* Flexobx */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.segundaParteFlex h2 {
+    width: fit-content;
+    margin-top: 15px;
+}
+
+.segundaParteFlex p {
+    width: 90%;
+}
+
+.segundaParte {
+    grid-area: mains;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+
+.pedicuraTextoTitulo h2 {
+    margin-bottom: 5px;
+
+}
+
+.pedicuraTextoTitulo p {
+    margin-bottom: 10px;
+}
+
+.terceraParte {
+    grid-area: maint;
+    padding-top: 15px;
+}
+
+.cejasTextoTitulo {
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "texto texto texto"
+        "img img img ";
+    gap: 5px;
+}
+
+.cejasTexto {
+    grid-area: texto;
+    text-align: center;
+    padding-bottom: 15px;
+
+    /* Flexbox */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgCejas {
+    grid-area: img;
+
+}
+
+.logo {
+    width: 0px;
+}
+
+.imagenPedicura img {
+    width: 100vw;
+    border-radius: 20px;
+}
+
+.imgCejas img {
+    width: 100vw;
+    border-radius: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ffa69e;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulo titulo titulo titulo titulo"
+        "cont cont cont cont cont";
+}
+
+.footer h4 {
+    font-family: "merriweather";
+    grid-area: titulo;
+
+}
+
+.footer__grid {
+    font-family: "roboto";
+    font-weight: bold;
+    font-size: 1rem;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    /* Grid */
+    grid-area: cont;
+}
+
+/* Enlace Grid */
+
+.divConteiner__enlace {
+    /* Grid */
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: 60px 55px auto auto auto 50px;
+    grid-template-areas: "head head head"
+        "nav nav nav"
+        "manic manic manic"
+        "info info info"
+        "table table table"
+        "footer footer footer";
+}
+
+.header__enlace {
+    background-color: #ffa69e;
+
+    /* Grid */
+    grid-area: head;
+}
+
+
+.nav__enlace {
+    background-color: #ffa69e;
+    border-bottom: 2px solid black;
+
+    /* Grid */
+    grid-area: nav;
+}
+
+.main__enlace {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #f8edeb;
+    /* Grid */
+    grid-area: manic;
+    gap: 5px;
+    /* Flexbox */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenManicura__enlace {
+    width: 100vw;
+    border-radius: 25px;
+    /* Grid */
+    grid-area: manic;
+}
+
+.info__enlace {
+    width: 100%;
+    text-align: center;
+    background-color: #f8edeb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* Flexbox */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    /* Grid */
+    grid-area: info;
+}
+
+iframe {
+    width: 100vw;
+
+    border-radius: 5px;
+
+    margin-top: 10px;
+}
+
+.footer__enlace {
+    border-top: 2px solid black;
+
+    /* Grid */
+    grid-area: footer;
+    grid-area: footer;
+    background-color: #ffa69e;
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulo titulo titulo titulo titulo"
+        "cont cont cont cont cont";
+}
+
+.footer__enlace h4 {
+    font-family: "merriweather";
+}
+
+/* .divConteiner__table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+
+    Grid
+    grid-area: table;
+
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+
+}
+
+thead th:nth-child(2) {
+    width: 30%;
+}
+
+thead th:nth-child(3) {
+    width: 30%;
+} */
+
+/* Formulario */
+
+.divConteiner__form {
+
+    /* Grid */
+    display: grid;
+    grid-template-columns: repeat(5, 5rem);
+    grid-template-rows: 60px 50px auto auto;
+    grid-template-areas: "head head head head head"
+        "navf navf navf navf navf"
+        "mainc mainc mainc mainc mainc"
+        "vid vid vid vid vid"
+        "ffooter ffooter ffooter ffooter ffooter";
+}
+
+.header__form {
+
+
+    /* Grid */
+    grid-area: head;
+}
+
+.nav__form {
+
+
+
+    /* Grid */
+    grid-area: navf;
+}
+
+form {
+    width: 90%;
+    background-color: #ffa69e;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 1px;
+    height: 300px;
+    
+/* Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+h3 {
+    font-family: "merriweather";
+
+}
+
+label {
+    font-family: "roboto";
+    font-weight: 600;
+}
+
+.form__Texto {
+    width: 80%;
+    text-align: center;
+}
+
+
+.form {
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* Grid */
+    grid-area: mainc;
+}
+
+.footer__form {
+
+    background-color: #ffa69e;
+
+    /* Grid */
+    grid-area: ffooter;
+}
+
+
+/* Media */
+
+@media screen and (min-width:1200px) {
+
+
+    /* Index */
+    .divConteiner {
+
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 120px 1fr 1fr 1fr 109px;
+        grid-template-rows: 100px 500px 500px 500px 100px;
+        grid-template-areas: "logo logo nav nav nav"
+            "side prim prim prim prim"
+            "side sec sec sec sec"
+            "side ter ter ter ter"
+            "footer footer footer footer footer";
+    }
+
+    .logo {
+        width: 100px;
+
+
+    }
+
+    .header {
+        grid-area: logo;
+
+        /* Flexbox */
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        grid-area: nav;
+        font-size: larger;
+        font-weight: 700;
+    }
+
+    li a{
+        text-align: center;
+        padding: 1px 5px;
+        padding-bottom: 2px;
+        text-decoration: none;
+        color: black;
+        border-bottom: 2px solid #f1c0e8;
+        border-radius: 5px;
+    }
+
+    /* manicura */
+    .primeraParte {
+        grid-area: prim;
+        margin-top: 10px;
+        width: 90%;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.226);
+        padding: 10px;
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: repeat(2 auto);
+        grid-template-areas: "img side"
+            "img texto"
+            "img box";
+    }
+
+    .manicuraTextoTitulo {
+        position: relative;
+        right: 40px;
+
+        /* Grid */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .manicuraTextoTitulo h2 {
+        font-size: x-large;
+    }
+
+    .manicuraTextoTitulo p {
+        font-size: large;
+    }
+
+    .imagenManicura img {
+        width: 450px;
+        height: 430px;
+
+    }
+
+    .formularioBox {
+
+
+        position: relative;
+        left: 150px;
+        top: 109px;
+    }
+
+    /* pedicura */
+    .segundaParte {
+        grid-area: sec;
+        border: none;
+        margin-bottom: none;
+    }
+    
+    .imagenPedicura img {
+        width: 500px;
+        height: 400px;
+
+        grid-area: imgp;
+    }
+
+    .segundaParteFlex {
+    margin-top: 25px;
+    width: 90%;
+    
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: repeat(2 auto);
+        grid-template-areas: "textop imgp"
+        "sidep imgp";
+        gap: 25px;
+    }
+
+    .pedicuraTextoTitulo {
+        height: fit-content;
+        border-radius: 15px;
+        box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.26);
+        background-image: url(/multimedia/fondo2.jpg);
+        grid-area: textop;
+    }
+
+    /* cejas */
+    .terceraParte {
+
+
+        grid-area: ter;
+    }
+
+    .cejasTextoTitulo {
+        width: 90%;
+        border: none;
+        box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.26);
+        border-radius: 5px;
+        border-radius: 20px;
+        /* Grid */
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: repeat(2 auto);
+        grid-template-areas: "imgc textoc"
+        "imgc textoc";
+    }
+
+    .imgCejas img {
+        width: 500px;
+        height: 400px;
+        
+    }
+
+    .imgCejas {
+        grid-area: imgc;
+        position: relative;
+        top: 15px;
+        left: 15px;
+    }
+
+    .cejasTexto {
+        grid-area: textoc;
+
+        /* Flexbox */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* footer */
+    .footer {
+    
+
+        grid-area: footer;
+    }
+
+    .footer div h4 {
+        position: relative;
+        left: 76px;
+        top: 25px;
+    }
+
+    /* GridEnlace */
+
+    .divConteiner__enlace {
+        display: grid;
+        grid-template-columns: 160px 1fr 1fr ;
+        grid-template-rows: 100px  auto auto auto 80px;
+        grid-template-areas: "head head nav"
+            "manic manic manic"
+            "info info info"
+            "table table table"
+            "footer footer footer";
+    }
+
+    .header__enlace {
+        grid-area: head;
+
+        /* Flexbox */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .nav__enlace {
+        grid-area: nav;
+        border: none;
+    }
+    
+    .main__enlace {
+        grid-area: manic;
+        padding: 1rem;
+
+        /* Grid */
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .enlacemain__textoTitulo {
+        box-shadow: 1px 1px 10px 1px black;
+        margin-left: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .info__enlace {
+        box-shadow: 1px 1px 5px 1px black;
+        grid-area: info;
+        padding-bottom: 25px;
+        /* Grid */
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "img texto";
+    }
+
+    .info__enlace :nth-child(1n) {
+        grid-area: texto;
+    }
+
+    .info__enlace :nth-child(2n) {
+        grid-area: img;
+    }
+
+    iframe {
+        width: 600px;
+        height: 300px;
+    }
+
+    .main__enlace article img {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* Pedicura-cejas */
+
+    .pedicura__Cejas {
+        
+
+        /* Flexbox */
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .pedicura__Cejas :nth-child(1n) {
+        width: 550px;
+        margin-right: 15px;
+        
+    }
+
+    /* Formulario */
+
+    .divConteiner__form {
+        background-color: #f1c0e8;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "head head nav nav nav"
+        "side side side side side"
+        "mainc mainc mainc mainc mainc"
+        "vid vid vid vid vid"
+        "ffooter ffooter ffooter ffooter ffooter";
+        
+    }
+
+    .header__form {
+        grid-area: head;
+        border-bottom: 2px solid black;
+        background-color: white;
+        /* Flex */
+        display: flex;
+        
+    }
+
+    .nav__form {
+        background-color: white;
+        grid-area: nav;
+        border-bottom: 2px solid black;
+    }
+
+    
+
+    .form {
+        grid-area: mainc;
+        width: 500px;
+        position: relative;
+        left: 330px;
+    }
+
+    .video__form {
+        grid-area: vid;
+        position: relative;
+        left: 280px;
+        top: 15px;
+    }
+
+    .footer__form {
+        height: 50px;
+        background-color: #ffa69e;
+        margin-top: 25px;
+        grid-area: ffooter;
+    }
+
+    .footer__form div h4 {
+        font-family: "merriweather";
+    }
+}
