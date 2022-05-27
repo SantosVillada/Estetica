@@ -55,10 +55,6 @@ p {
         "footer footer footer";
 }
 
-body {
-    background-image: linear-gradient(to bottom, #f7b2f43f, #f8edeb38);
-}
-
 .header {
     grid-area: header;
     /* background-color: #f8edeb; */
@@ -577,6 +573,15 @@ label {
         grid-template-areas: "img side"
             "img texto"
             "img box";
+
+            /* Animation */
+            animation: subir 1s alternate ;
+    }
+
+    @keyframes subir {
+        from {
+            transform: translatey(40vh);
+        }
     }
 
     .manicuraTextoTitulo {
@@ -636,6 +641,9 @@ label {
         grid-template-areas: "textop imgp"
             "sidep imgp";
         gap: 25px;
+
+        /* animation */
+        animation: 1s subir alternate;
     }
 
     .pedicuraTextoTitulo {
@@ -665,6 +673,9 @@ label {
         grid-template-rows: repeat(2 auto);
         grid-template-areas: "imgc textoc"
             "imgc textoc";
+
+             /* animation */
+        animation: 1s subir alternate;
     }
 
     .imgCejas img {
