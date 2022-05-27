@@ -13,7 +13,7 @@ li {
 }
 
 h1 {
-    color: #f1c0e8;
+    color: #000000;
     font-family: "merriweather";
     /* Grid */
     display: flex;
@@ -43,15 +43,21 @@ p {
         "footer footer footer";
 }
 
+body {
+    background-image: linear-gradient(to bottom, #f7b2f43f, #f8edeb38);
+}
+
 .header {
     grid-area: header;
-    background-color: #f8edeb;
+    /* background-color: #f8edeb; */
+    /* background-image: linear-gradient(to bottom, #f7b2f3, #f8edeb); */
 }
 
 .nav {
     grid-area: nav;
     padding-bottom: 15px;
-    background-color: #f8edeb;
+    /* background-color: #f8edeb; */
+    /* background-image: linear-gradient(to bottom, #f8edeb, white); */
 }
 
 .navFlex {
@@ -66,7 +72,11 @@ p {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    transition: 2s;
+}
 
+.navFlex:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .primeraParte {
@@ -114,9 +124,22 @@ p {
 .imagenManicura {
     margin-top: 25px;
 
+    /* animacion */
+    animation: inflar 1s alternate;
 
     /* Grid */
     grid-area: img;
+}
+
+@keyframes inflar {
+
+    from {
+        transform: scale(.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .imagenManicura img {
@@ -143,8 +166,10 @@ p {
     /* Grid */
     grid-area: box;
 }
-.formularioBox:hover{
-    transform: scale(1.05, 1.05);
+
+.formularioBox:hover {
+    transform: scale(1.1, 1.1);
+
 }
 
 .formularioBox a {
@@ -429,8 +454,8 @@ form {
     border-radius: 15px;
     box-shadow: 1px 1px 5px 1px;
     height: 300px;
-    
-/* Flexbox */
+
+    /* Flexbox */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -516,7 +541,7 @@ label {
         font-weight: 700;
     }
 
-    li a{
+    li a {
         text-align: center;
         padding: 1px 5px;
         padding-bottom: 2px;
@@ -582,7 +607,7 @@ label {
         border: none;
         margin-bottom: none;
     }
-    
+
     .imagenPedicura img {
         width: 500px;
         height: 400px;
@@ -591,16 +616,16 @@ label {
     }
 
     .segundaParteFlex {
-    margin-top: 25px;
-    width: 90%;
-    
+        margin-top: 25px;
+        width: 90%;
+
 
         /* Grid */
         display: grid;
         grid-template-columns: 40% 60%;
         grid-template-rows: repeat(2 auto);
         grid-template-areas: "textop imgp"
-        "sidep imgp";
+            "sidep imgp";
         gap: 25px;
     }
 
@@ -630,13 +655,13 @@ label {
         grid-template-columns: 60% 40%;
         grid-template-rows: repeat(2 auto);
         grid-template-areas: "imgc textoc"
-        "imgc textoc";
+            "imgc textoc";
     }
 
     .imgCejas img {
         width: 500px;
         height: 400px;
-        
+
     }
 
     .imgCejas {
@@ -656,7 +681,7 @@ label {
 
     /* footer */
     .footer {
-    
+
 
         grid-area: footer;
     }
@@ -671,8 +696,8 @@ label {
 
     .divConteiner__enlace {
         display: grid;
-        grid-template-columns: 160px 1fr 1fr ;
-        grid-template-rows: 100px  auto auto auto 80px;
+        grid-template-columns: 160px 1fr 1fr;
+        grid-template-rows: 100px auto auto auto 80px;
         grid-template-areas: "head head nav"
             "manic manic manic"
             "info info info"
@@ -688,12 +713,12 @@ label {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     .nav__enlace {
         grid-area: nav;
         border: none;
     }
-    
+
     .main__enlace {
         grid-area: manic;
         padding: 1rem;
@@ -741,18 +766,18 @@ label {
     /* Pedicura-cejas */
 
     .pedicura__Cejas {
-        
+
 
         /* Flexbox */
         display: flex;
         flex-direction: row;
-        
+
     }
 
     .pedicura__Cejas :nth-child(1n) {
         width: 550px;
         margin-right: 15px;
-        
+
     }
 
     /* Formulario */
@@ -761,11 +786,11 @@ label {
         background-color: #f1c0e8;
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas: "head head nav nav nav"
-        "side side side side side"
-        "mainc mainc mainc mainc mainc"
-        "vid vid vid vid vid"
-        "ffooter ffooter ffooter ffooter ffooter";
-        
+            "side side side side side"
+            "mainc mainc mainc mainc mainc"
+            "vid vid vid vid vid"
+            "ffooter ffooter ffooter ffooter ffooter";
+
     }
 
     .header__form {
@@ -774,7 +799,7 @@ label {
         background-color: white;
         /* Flex */
         display: flex;
-        
+
     }
 
     .nav__form {
@@ -783,7 +808,7 @@ label {
         border-bottom: 2px solid black;
     }
 
-    
+
 
     .form {
         grid-area: mainc;
