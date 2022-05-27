@@ -10,6 +10,14 @@ li {
     list-style: none;
     display: inline;
 
+    
+    transition: 0.5s;
+
+}
+
+li:hover {
+    transform: scale(1.05, 1.05);
+    
 }
 
 h1 {
@@ -32,6 +40,10 @@ p {
 }
 
 .divConteiner {
+
+    background-image: linear-gradient(to bottom, #f7b2f43f, #f8edeb38);
+
+    /* Grid */
     display: grid;
     grid-template-columns: 150px 1fr 1fr;
     grid-template-rows: 60px 60px auto auto auto 50px;
@@ -72,11 +84,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    transition: 2s;
-}
-
-.navFlex:hover {
-    transform: scale(1.1, 1.1);
+    
 }
 
 .primeraParte {
@@ -85,6 +93,7 @@ body {
     padding-bottom: 15px;
     border-top: 2px solid black;
     padding-top: 10px;
+    background-color: white;
 
     /* Grid */
     display: grid;
