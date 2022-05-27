@@ -143,8 +143,8 @@ p {
     /* Grid */
     grid-area: box;
 }
-.formularioBox:hover {
-    
+.formularioBox:hover{
+    transform: scale(1.05, 1.05);
 }
 
 .formularioBox a {
