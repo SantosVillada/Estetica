@@ -137,8 +137,14 @@ p {
     background-color: #f1c0e8;
     margin: 15px;
 
+    /* transform */
+    transition: all 0.5s;
+
     /* Grid */
     grid-area: box;
+}
+.formularioBox:hover {
+    
 }
 
 .formularioBox a {
