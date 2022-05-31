@@ -92,17 +92,16 @@ p {
     /* Grid */
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 70px auto auto;
-    grid-template-areas: "texto texto texto"
-        "img img img"
+    grid-template-rows: 35rem 8rem auto;
+    grid-template-areas: "img img img"
+        "texto texto texto"
         ". box box";
 }
 
 .manicuraTextoTitulo {
     width: 100%;
     text-align: center;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    
 
     /* Grid */
     grid-area: texto;
@@ -127,28 +126,21 @@ p {
 .imagenManicura {
     margin-top: 25px;
 
-    /* animacion */
-    animation: inflar 1s alternate;
-
-    /* Grid */
+     /* Grid  */
     grid-area: img;
 }
 
-@keyframes inflar {
-
-    from {
-        transform: scale(.8);
-    }
-
-    to {
-        transform: scale(1);
-    }
+.carousel-inner {
+    grid-area: img;
+    max-width: 35rem;
+    max-height: 30rem;
 }
 
-.imagenManicura img {
+
+/* .imagenManicura img {
     width: 100vw;
     border-radius: 20px;
-}
+} */
 
 .formularioBox {
     border: 2px solid black;
@@ -508,20 +500,7 @@ label {
 
 
     /* Index */
-    .divConteiner {
-
-
-        /* Grid */
-        display: grid;
-        grid-template-columns: 120px 1fr 1fr 1fr 109px;
-        grid-template-rows: 100px 500px 500px 500px 100px;
-        grid-template-areas: "logo logo nav nav nav"
-            "side prim prim prim prim"
-            "side sec sec sec sec"
-            "side ter ter ter ter"
-            "footer footer footer footer footer";
-    }
-
+    
     .logo {
         width: 100px;
 
@@ -568,23 +547,22 @@ label {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: repeat(2 auto);
-        grid-template-areas: "img side"
-            "img texto"
+        grid-template-areas: "img texto"
             "img box";
 
             /* Animation */
-            animation: subir 1s alternate ;
+            /* animation: subir 1s alternate ; */
     }
 
-    @keyframes subir {
+    /* @keyframes subir {
         from {
             transform: translatey(40vh);
         }
-    }
+    } */
 
     .manicuraTextoTitulo {
         position: relative;
-        right: 40px;
+        right: 20px;
 
         /* Grid */
         flex-direction: column;
@@ -599,18 +577,18 @@ label {
         font-size: large;
     }
 
-    .imagenManicura img {
-        width: 450px;
-        height: 430px;
-
+    .carousel-inner {
+        grid-area: img;
+        max-width: 35rem;
+        max-height: 37rem;
     }
 
     .formularioBox {
-
-
-        position: relative;
+    
+    grid-area: box;
+        /* position: relative;
         left: 150px;
-        top: 109px;
+        top: 109px; */
     }
 
     /* pedicura */
