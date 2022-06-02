@@ -17,10 +17,14 @@
 </head>
 
 <body>
+
+    <div class="header">
+        <img src="../multimedia/logo.jpg" alt="logo" class="logo">
+        <h1>Siempre Bela</h1>
+    </div>
+    
     <div class="container-fluid">
         <div class="row mx-auto">
-            <img src="./multimedia/logo.jpg" alt="logo" class="logo">
-            <h1>Siempre Bela</h1>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Inicio</a>
@@ -32,8 +36,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="./enlaces/manicura.html">Manicura</a>
+                                <a class="nav-link" aria-current="page" href="./enlaces/manicura.html">Manicura</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./enlaces/pedicura.html">Pedicura</a>
@@ -56,13 +59,13 @@
             <!----------- Carousel de img --------->
             <div id="carouselExampleSlidesOnly" class="carousel slide imagenManicura col h" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-bs-interval="2500">
                         <img src="./multimedia/uñas-con-fondo.jpeg" class="d-block w-100" alt="uñas">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="2500">
                         <img src="./multimedia/uñas-con-pañuelo.jpeg" class="d-block w-100" alt="uñas2">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-bs-interval="2500">
                         <img src="./multimedia/uñas-sosteniendo-planta.jpeg" class="d-block w-100" alt="uñas3">
                     </div>
                 </div>
@@ -106,18 +109,20 @@
             </div>
         </div>
 
-        <div class="footer">
-            <div>
-                <h4 id="redes">Más sobre nosotros</h4>
-            </div>
-            <div class="footer__grid">
-                <a href="">Instagram</a>
-                <a href="">Facebook</a>
-                <a href="">WhatsApp</a>
-                <a href="">Terminos y condiciones</a>
-                <a href="">Ayuda</a>
-            </div>
+        <div id="redes">
+            <h4 >Más sobre nosotros</h4>
         </div>
+
+        <div class="list-group d-flex flex-row foot">
+            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
+            <a href="#">Instagram</a>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action"><a href="#">Facebook</a>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action"><a href="#">WhatsApp</a></button>
+            <button type="button" class="list-group-item list-group-item-action"><a href="#">Terminos y condiciones</a></button>
+            <button type="button" class="list-group-item list-group-item-action" disabled><a href="#">Ayuda</a></button>
+          </div>
     </div>
 
 
