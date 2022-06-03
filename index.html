@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,119 +13,158 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/Style.css">
+    <link rel="stylesheet" href="./css/Styles.css">
 </head>
 
 <body>
+    <Div class="divContainer">
 
-    <div class="header">
-        <img src="./multimedia/logo.jpg" alt="logo" class="logo">
-        <h1>Siempre Bela</h1>
-    </div>
-    
-    <div class="container-fluid">
-        <div class="row mx-auto">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Inicio</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+
+        <!--------- header ---------->
+
+        <header class="header">
+            <section>
+                <img src="./multimedia/logo.jpg" alt="logo" class="logo">
+                <h1>Siempre Bela</h1>
+            </section>
+
+            <section>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Inicio</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="./enlaces/manicura.html">Manicura</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./enlaces/pedicura.html">Pedicura</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./enlaces/cejas.html">Perfilado de Cejas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./enlaces/formulario.html">Registrarme</a>
+                                </li>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </header>
+
+        <!-------- main ------->
+        <main class="main">
+            <!--============== Col-1  =============-->
+            <div class="grid-col-1">
+
+                <!----------- Carousel de img --------->
+                <article id="carouselExampleSlidesOnly" class="carousel slide manicura-carousel"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2500">
+                            <img src="./multimedia/uñas-con-fondo.jpeg" class="d-block w-100" alt="uñas">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <img src="./multimedia/uñas-con-pañuelo.jpeg" class="d-block w-100" alt="uñas2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2500">
+                            <img src="./multimedia/uñas-sosteniendo-planta.jpeg" class="d-block w-100" alt="uñas3">
+                        </div>
+                    </div>
+                </article>
+
+                <!-------- Texto  --------->
+                <article class="manicura">
+                    <h2>Manicura Rusa</h2>
+                    <p>Nos especializamos en hacer los mejores estilos del momento en nuestras manos y asi sentirnos
+                        orgullosas de ellas.</p>
+                </article>
+
+                <!----- Button a formulario ----->
+                <article class="form-button">
+                    <button type="button" class="btn">
+                        <a href="./enlaces/formulario.html">Más sobre nosotros</a>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./enlaces/manicura.html">Manicura</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./enlaces/pedicura.html">Pedicura</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./enlaces/cejas.html">Perfilado de Cejas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./enlaces/formulario.html">Registrarme</a>
-                            </li>
-                    </div>
-                </div>
-            </nav>
-        </div>
+                </article>
 
-
-        <!-- Seccion manicura -->
-        <div class="primeraParte row w-100 mx-auto ">
-
-            <!----------- Carousel de img --------->
-            <div id="carouselExampleSlidesOnly" class="carousel slide imagenManicura col h" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="2500">
-                        <img src="./multimedia/uñas-con-fondo.jpeg" class="d-block w-100" alt="uñas">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2500">
-                        <img src="./multimedia/uñas-con-pañuelo.jpeg" class="d-block w-100" alt="uñas2">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2500">
-                        <img src="./multimedia/uñas-sosteniendo-planta.jpeg" class="d-block w-100" alt="uñas3">
-                    </div>
-                </div>
             </div>
 
-            <article class="manicuraTextoTitulo row">
-                <h2>Manicura Rusa</h2>
-                <p>Nos especializamos en hacer los mejores estilos del momento en nuestras manos y asi sentirnos
-                    orgullosas de ellas.</p>
-            </article>
-
-            <article class="formularioBox col">
-                <a href="./enlaces/formulario.html">Conocé más sobre nosotros</a>
-            </article>
-        </div>
-
-        <!-- Seccion Pedciura -->
-        <div class="segundaParte">
-            <div class="segundaParteFlex">
-                <article class="pedicuraTextoTitulo">
+            <!--==============   col-2   =================-->
+            <div class="grid-col-2">
+                <article class="pedicura">
                     <h2>Pedicura</h2>
                     <p>Dedicamos parte de nuestro tiempo a el cuidado de nuestros pies, a darles cariño ya que son
                         los quenos soportan día a día.</p>
                 </article>
-                <article class="imagenPedicura">
-                    <img src="./multimedia/pedicura.jpeg" alt="imagenpies">
+
+                <article class="img-col2">
+                    <div id="carouselExampleIndicators" class="carousel slide pedicura-carousel"
+                        data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./multimedia/ManicuraPedicura-2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./multimedia/manicura_pedicura.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./multimedia/pedicura-brown.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </article>
             </div>
-        </div>
 
-        <!-- seccion Cejas -->
-        <div class="terceraParte">
-            <div class="cejasTextoTitulo">
-                <article class="cejasTexto">
+            <!--==============   col-2   =================-->
+            <div class="grid-col-3">
+
+                <article class="cejas">
                     <h2>Perfilado de Cejas</h2>
                     <p>Le damos cuidado y estilo a nuestras cejas ya que estas son las que mas nos representa.</p>
                 </article>
-                <article class="imgCejas">
-                    <img src="./multimedia/cejas.jpeg" alt="imagenCejas">
+
+                <article class="cejas-img">
+                    <img src="./multimedia/cejas.jpeg" alt="">
                 </article>
             </div>
-        </div>
-
-        <div id="redes">
-            <h4 >Más sobre nosotros</h4>
-        </div>
-
-        <div class="list-group d-flex flex-row foot">
-            <button type="button" class="list-group-item list-group-item-action" aria-current="true">
-            <a href="#">Instagram</a>
-            </button>
-            <button type="button" class="list-group-item list-group-item-action"><a href="#">Facebook</a>
-            </button>
-            <button type="button" class="list-group-item list-group-item-action"><a href="#">WhatsApp</a></button>
-            <button type="button" class="list-group-item list-group-item-action"><a href="#">Terminos y condiciones</a></button>
-            <button type="button" class="list-group-item list-group-item-action" disabled><a href="#">Ayuda</a></button>
-          </div>
-    </div>
 
 
+
+        </main>
+
+
+        <footer>
+
+
+        </footer>
+
+
+
+
+    </Div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
