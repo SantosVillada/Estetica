@@ -28,11 +28,11 @@
     /* Grid */
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto) 100px;
-    grid-template-areas:"col1 col1"
-    "col2 col2"
-    "col3 col3"
-    "foot foot";
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "col1 col1"
+        "col2 col2"
+        "col3 col3"
+        "foot foot";
 }
 
 .grid-col-1 {
@@ -46,7 +46,7 @@
     justify-content: center;
     align-items: center;
 }
-}
+
 
 .manicura-carousel {
     height: 37rem;
@@ -68,27 +68,29 @@
     font-weight: 600;
 }
 
-.btn {
+.btn-index {
     background-color: #feeafa;
-    transition: "box" 0.1s;
+    transition: "box"0.1s;
     transform: translatex(120px);
 }
 
-.btn a {
+.btn-index a {
     text-decoration: none;
     color: black;
     font-weight: 500;
 }
 
-.btn a:hover {
+.btn-index a:hover {
     color: blueviolet;
     text-decoration: underline;
+
 }
 
-.btn:hover {
+.btn-index:hover {
     transition-property: "box";
     transform: scale(1.05, 1.05);
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.308);
+    transform: translatex(120px)
 }
 
 
@@ -107,19 +109,15 @@
     align-items: center;
 }
 
-.pedicura {
-    text-align: center;
-    width: 80vw;
-}
-
-.pedicura h2{
+.pedicura h2 {
     font-family: "merriweather";
-
+    text-align: center;
 }
 
-.pedicura p{
+.pedicura p {
     font-family: "roboto";
     font-weight: 600;
+    text-align: center;
 }
 
 .pedicura-carousel {
@@ -147,7 +145,7 @@
     width: 80vw;
 }
 
-.cejas h2{
+.cejas h2 {
     font-family: "merriweather";
 }
 
@@ -160,3 +158,180 @@
     width: 100vw;
 }
 
+/* <------- Footer --------> */
+
+.footer {
+    background-image: linear-gradient(to bottom, #fc96e88e, #d681c5af);
+    grid-area: foot;
+
+}
+
+.footer-h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-family: "roboto";
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* <=============== Pagina Formulario ================> */
+.form-box {
+    width: 80%;
+    background-color: #feeafa;
+    padding: 0.8rem;
+    border-radius: 15px;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-grid {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+iframe {
+    width: 100vw;
+    padding-bottom: 1rem;
+}
+
+/* <------- Media --------> */
+
+@media screen and (min-width:1200px) {
+
+    .divContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "head head head"
+            "main main main"
+            "foot foot foot";
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .logo-section {
+        padding-top: 1rem;
+        width: 61%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header {
+        grid-area: head;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: foot;
+    }
+
+    .nav-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-weight: 500;
+    }
+
+    /* <------- Main-col-1 --------> */
+
+    .grid-col-1 {
+        border: 1px solid black;
+        /* Grid */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 25%);
+        grid-template-areas: "carousel carousel text"
+            "carousel carousel text"
+            "carousel carousel text"
+            "carousel carousel button";
+    }
+
+
+    .manicura-carousel {
+        grid-area: carousel;
+    }
+
+    .manicura-carousel img {
+        height: 700px;
+    }
+
+    .manicura {
+        grid-area: text;
+        text-align: center;
+        width: 350px;
+    }
+
+    .form-button {
+        grid-area: button;
+    }
+
+    /* <------- Main-col-2 --------> */
+    .flex-col-2 {
+        width: 80%;
+    }
+
+    .pedicura-carousel img {
+        height: 600px;
+    }
+
+    .pedicura h2 {
+        text-align: center;
+        width: 40%;
+    }
+
+    .pedicura p {
+        text-align: center;
+        width: 60%;
+    }
+
+    .pedicura {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* <------- Main-col-2 --------> */
+    .cejas-img img {
+        width: 90%;
+        height: 400px;
+    }
+
+    /* <=============== Pagina Formulario ================> */
+    .form-grid {
+        background-image: url(/multimedia/vector-fondo.jpg);
+    }
+
+    .form-flex {
+        width: 97%;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .form-box {
+        width: 40%;
+    }
+
+    iframe {
+        height: 500px;
+    }
+}

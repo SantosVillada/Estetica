@@ -523,9 +523,6 @@ label {
         border-radius: 5px; */
     }
 
-    
-
-    
     /* manicura */
     .primeraParte {
         grid-area: prim;
@@ -577,7 +574,6 @@ label {
     }
 
     .formularioBox {
-    
     grid-area: box;
         /* position: relative;
         left: 150px;
