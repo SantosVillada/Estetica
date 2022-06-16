@@ -1,4 +1,11 @@
 @import 'variables';
+@import 'mixins';
+
+/* Funcion */
+@function color($color-name) {
+    @return map-get($colores-fondo, $color-name)
+}
+
 
 * {
     box-sizing: border-box;
@@ -12,14 +19,14 @@
 }
 
 .header {
-    background-color: $color-principal;
+    background-color: (principal);
     padding-bottom: 1rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.336);
 
     section {
         h1 {
             text-align: center;
-            font-family: "merriweather";
+            font-family: $font-title;
             font-weight: 800;
         }
     }
@@ -65,17 +72,22 @@
     width: 80vw;
 
     h2 {
-        font-family: "merriweather";
+        font-family: $font-title;
     }
 
     p {
-        font-family: "roboto";
+        font-family: $font-text;
         font-weight: 600;
+    }
+    @include desktop {
+        grid-area: text;
+        text-align: center;
+        width: 350px;
     }
 }
 
 .btn-index {
-    background-color: $color-secundario;
+    background-color: (secundario);
     transition: "box"0.1s;
     transform: translatex(120px);
 
@@ -83,7 +95,11 @@
         transition-property: "box";
         transform: scale(1.05, 1.05);
         box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.308);
-        transform: translatex(120px)
+        transform: translatex(120px);
+
+        @include desktop{
+        background-color: (secundario);
+        }
     }
 
     a {
@@ -92,7 +108,7 @@
         font-weight: 500;
 
         &:hover {
-            color: blueviolet;
+            color: (boton-texto);
             text-decoration: underline;
         }
     }
@@ -115,12 +131,12 @@
 
 .pedicura {
     h2 {
-        font-family: "merriweather";
+        font-family: $font-title;
         text-align: center;
     }
 
     p {
-        font-family: "roboto";
+        font-family: $font-text;
         font-weight: 600;
         text-align: center;
     }
@@ -151,11 +167,11 @@
     width: 80vw;
 
     h2 {
-        font-family: "merriweather";
+        font-family: $font-title;
     }
 
     p {
-        font-family: "roboto";
+        font-family: $font-text;
         font-weight: 600;
     }
 }
@@ -197,7 +213,7 @@
 /* <=============== Pagina Formulario ================> */
 .form-box {
     width: 80%;
-    background-color: $color-secundario;
+    background-color: (secundario);
     padding: 0.8rem;
     border-radius: 15px;
 }
@@ -212,6 +228,16 @@
 .form-grid {
     padding-bottom: 2rem;
     padding-top: 1rem;
+}
+
+.btn--formulario {
+    @extend .btn-index;
+    background-color: blue;
+    transform: translate(0);
+
+    &:hover {
+        transform: translate(0);
+    }
 }
 
 iframe {
@@ -287,9 +313,7 @@ iframe {
     }
 
     .manicura {
-        grid-area: text;
-        text-align: center;
-        width: 350px;
+        
     }
 
     .form-button {

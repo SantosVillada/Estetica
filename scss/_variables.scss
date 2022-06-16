@@ -1,2 +1,9 @@
-$color-principal: #feeafa7e;
-$color-secundario: #feeafa;
+/* Colores */
+$colores-fondo: (principal:#feeafa7e, secundario:#feeafa, boton-texto:blueviolet);
+
+/* fuentes */
+$font-title:'Merriweather';
+$font-text:'Roboto';
+
+/* breakpoint */
+$desktop: 1200px

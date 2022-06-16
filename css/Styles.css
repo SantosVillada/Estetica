@@ -1,3 +1,10 @@
+/* Colores */
+/* fuentes */
+/* breakpoint */
+/* Colores */
+/* fuentes */
+/* breakpoint */
+/* Funcion */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,12 +15,12 @@
   width: 0%; }
 
 .header {
-  background-color: #feeafa7e;
+  background-color: principal;
   padding-bottom: 1rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.336); }
   .header section h1 {
     text-align: center;
-    font-family: "merriweather";
+    font-family: "Merriweather";
     font-weight: 800; }
 
 /* <------- Main-col-1 --------> */
@@ -44,26 +51,34 @@
   margin-top: 2rem;
   width: 80vw; }
   .manicura h2 {
-    font-family: "merriweather"; }
+    font-family: "Merriweather"; }
   .manicura p {
-    font-family: "roboto";
+    font-family: "Roboto";
     font-weight: 600; }
+  @media (min-width: 1200px) {
+    .manicura {
+      grid-area: text;
+      text-align: center;
+      width: 350px; } }
 
-.btn-index {
-  background-color: #feeafa;
+.btn-index, .btn--formulario {
+  background-color: secundario;
   transition: "box" 0.1s;
   transform: translatex(120px); }
-  .btn-index:hover {
+  .btn-index:hover, .btn--formulario:hover {
     transition-property: "box";
     transform: scale(1.05, 1.05);
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.308);
     transform: translatex(120px); }
-  .btn-index a {
+    @media (min-width: 1200px) {
+      .btn-index:hover, .btn--formulario:hover {
+        background-color: secundario; } }
+  .btn-index a, .btn--formulario a {
     text-decoration: none;
     color: black;
     font-weight: 500; }
-    .btn-index a:hover {
-      color: blueviolet;
+    .btn-index a:hover, .btn--formulario a:hover {
+      color: boton-texto;
       text-decoration: underline; }
 
 /* <------- Main-col-2 --------> */
@@ -79,11 +94,11 @@
   align-items: center; }
 
 .pedicura h2 {
-  font-family: "merriweather";
+  font-family: "Merriweather";
   text-align: center; }
 
 .pedicura p {
-  font-family: "roboto";
+  font-family: "Roboto";
   font-weight: 600;
   text-align: center; }
 
@@ -106,9 +121,9 @@
 .cejas {
   width: 80vw; }
   .cejas h2 {
-    font-family: "merriweather"; }
+    font-family: "Merriweather"; }
   .cejas p {
-    font-family: "roboto";
+    font-family: "Roboto";
     font-weight: 600; }
 
 .cejas-img img {
@@ -134,7 +149,7 @@
 /* <=============== Pagina Formulario ================> */
 .form-box {
   width: 80%;
-  background-color: #feeafa;
+  background-color: secundario;
   padding: 0.8rem;
   border-radius: 15px; }
 
@@ -147,6 +162,12 @@
 .form-grid {
   padding-bottom: 2rem;
   padding-top: 1rem; }
+
+.btn--formulario {
+  background-color: blue;
+  transform: translate(0); }
+  .btn--formulario:hover {
+    transform: translate(0); }
 
 iframe {
   width: 100vw;
@@ -190,10 +211,6 @@ iframe {
     grid-area: carousel; }
     .manicura-carousel img {
       height: 700px; }
-  .manicura {
-    grid-area: text;
-    text-align: center;
-    width: 350px; }
   .form-button {
     grid-area: button; }
   /* <------- Main-col-2 --------> */
