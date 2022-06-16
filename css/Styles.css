@@ -15,7 +15,7 @@
   width: 0%; }
 
 .header {
-  background-color: principal;
+  background-color: #feeafa7e;
   padding-bottom: 1rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.336); }
   .header section h1 {
@@ -62,7 +62,7 @@
       width: 350px; } }
 
 .btn-index, .btn--formulario {
-  background-color: secundario;
+  background-color: #ffafcc;
   transition: "box" 0.1s;
   transform: translatex(120px); }
   .btn-index:hover, .btn--formulario:hover {
@@ -72,7 +72,7 @@
     transform: translatex(120px); }
     @media (min-width: 1200px) {
       .btn-index:hover, .btn--formulario:hover {
-        background-color: secundario; } }
+        background-color: lighten #ffafcc 30%; } }
   .btn-index a, .btn--formulario a {
     text-decoration: none;
     color: black;

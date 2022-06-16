@@ -19,7 +19,7 @@
 }
 
 .header {
-    background-color: (principal);
+    background-color: color(principal);
     padding-bottom: 1rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.336);
 
@@ -87,7 +87,7 @@
 }
 
 .btn-index {
-    background-color: (secundario);
+    background-color: color(boton-bg);
     transition: "box"0.1s;
     transform: translatex(120px);
 
@@ -98,7 +98,7 @@
         transform: translatex(120px);
 
         @include desktop{
-        background-color: (secundario);
+        background-color: color(boton-bg-light);
         }
     }
 
