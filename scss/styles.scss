@@ -6,6 +6,14 @@
     @return map-get($colores-fondo, $color-name)
 }
 
+h2 {
+    font-family: $font-title;
+}
+
+p {
+    font-family: $font-text;
+    font-weight: 600;
+}
 
 * {
     box-sizing: border-box;
@@ -58,12 +66,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
+}
 
 .manicura-carousel {
     height: 37rem;
     overflow: hidden;
+
+    @include desktop {
+        width: 750px;
+
+    }
 }
 
 .manicura {
@@ -79,6 +92,7 @@
         font-family: $font-text;
         font-weight: 600;
     }
+
     @include desktop {
         grid-area: text;
         text-align: center;
@@ -97,8 +111,8 @@
         box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.308);
         transform: translatex(120px);
 
-        @include desktop{
-        background-color: color(boton-bg-light);
+        @include desktop {
+            background-color: color(boton-bg-light);
         }
     }
 
@@ -213,7 +227,7 @@
 /* <=============== Pagina Formulario ================> */
 .form-box {
     width: 80%;
-    background-color: (secundario);
+    background-color: color(secundario);
     padding: 0.8rem;
     border-radius: 15px;
 }
@@ -244,6 +258,230 @@ iframe {
     width: 100vw;
     padding-bottom: 1rem;
 }
+
+/* <=============== Pagina Manicura ================> */
+
+.main-enlace-archivero {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "manicura"
+        "beneManic"
+        "archivero";
+}
+
+.enlaceArchivero-col-1 {
+    grid-area: manicura;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.507);
+    padding-bottom: 1rem;
+
+    @include desktop {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    /* Media */
+    div {
+        @include desktop {
+            width: 80%;
+            padding-top: 1rem;
+            /* Flexbox */
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    section {
+        @include desktop {
+            width: 50%;
+        }
+
+        .enlacemain__textoTitulo {
+            padding-top: 1rem;
+            /* Flexbox */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                font-family: $font-title;
+            }
+
+            p {
+                width: 90%;
+                text-align: center;
+                font-family: $font-text;
+            }
+        }
+    }
+
+    /* Media */
+
+    @include desktop {
+
+        .sectionimg-manicura {
+            width: fit-content;
+
+            .imagen-manicura-enlace {
+
+                img {
+                    width: 400px;
+                    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.37);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+/*========== Col-2 ===========*/
+
+.enlaceArchivero-col-2 {
+    grid-area: beneManic;
+    padding-top: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.507);
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .col-2-section-1 {
+        text-align: center;
+    }
+
+    @include desktop {
+        padding-top: 5rem;
+
+        div {
+            width: 80%;
+            /* Flexbox */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .col-2-section-1 {
+            width: 40%;
+        }
+
+        .col-2-section-2 {
+            width: fit-content;
+        }
+
+        iframe {
+            width: 60rem;
+        }
+    }
+}
+
+.col-2-article-1 {
+    h2 {
+        font-family: $font-title;
+    }
+
+    p {
+        font-family: $font-text;
+    }
+}
+
+/* ======= col-3 ========== */
+.enlaceArchivero-col-3 {
+    grid-area: archivero;
+    background-color: color(principal);
+    padding: 1rem 1rem;
+
+    .text-dark {
+        font-weight: 500;
+    }
+}
+
+/* <=============== Paginas Cejas, Pedicura ================> */
+
+.main-enlace {
+    width: 100vw;
+    /* Grid */
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: "row1"
+        "row2";
+}
+
+.enlace-col-1 {
+    grid-area: row1;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.507);
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section {
+        text-align: center;
+    }
+
+    @include desktop {
+        div {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            section {
+                width: 40%;
+            }
+        }
+
+    }
+}
+
+
+/* ======= col-2 ========== */
+.enlace-col-2 {
+    grid-area: row2;
+    padding-top: 1rem;
+    background-color: color(principal);
+
+    article {
+        text-align: center;
+    }
+
+    @include desktop {
+        div {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+
+            .section-texto-col-2 {
+                width: 40%;
+
+                article {
+                    width: 80%;
+                }
+            }
+
+            section {
+                article {
+                    iframe {
+                        width: 900px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 /* <------- Media --------> */
 
@@ -295,12 +533,12 @@ iframe {
         border: 1px solid black;
         /* Grid */
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 150px repeat(3, 550px);
         grid-template-rows: repeat(4, 25%);
-        grid-template-areas: "carousel carousel text"
-            "carousel carousel text"
-            "carousel carousel text"
-            "carousel carousel button";
+        grid-template-areas: "side carousel carousel text"
+            "side carousel carousel text"
+            "side carousel carousel text"
+            "side carousel carousel button";
     }
 
 
@@ -312,10 +550,6 @@ iframe {
         }
     }
 
-    .manicura {
-        
-    }
-
     .form-button {
         grid-area: button;
     }
@@ -323,16 +557,25 @@ iframe {
     /* <------- Main-col-2 --------> */
     .flex-col-2 {
         width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .img-col2 {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .pedicura-carousel img {
-        height: 600px;
+        height: 550px;
     }
 
     .pedicura {
         text-align: center;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
         h2 {
@@ -344,6 +587,10 @@ iframe {
             text-align: center;
             width: 60%;
         }
+    }
+
+    .pedicura-carousel {
+        width: 1000px;
     }
 
     /* <------- Main-col-3 --------> */
