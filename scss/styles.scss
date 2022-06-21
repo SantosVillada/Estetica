@@ -356,30 +356,34 @@ iframe {
     .col-2-section-1 {
         text-align: center;
     }
+    div{
+        background-color: color(secundario);
+            background-repeat: no-repeat;
+    }
 
     @include desktop {
         padding-top: 5rem;
 
         div {
-            width: 80%;
-            /* Flexbox */
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
+            width: 90%;
+            padding: 1rem 1rem;
+
+            @include desktopm {
+                width: 100%;
+                background-image: url(../multimedia/manicura-rusa.jpg);
+            }
+            @include desktopxxl{
+                width: 60%;
+            }
         }
 
         .col-2-section-1 {
-            width: 40%;
+            width: 50%;
         }
 
-        .col-2-section-2 {
+        /* .col-2-section-2 {
             width: fit-content;
-        }
-
-        iframe {
-            width: 60rem;
-        }
+        } */
     }
 }
 

@@ -5,3 +5,15 @@
         @content;
     }
 }
+
+@mixin desktopxxl {
+    @media(min-width:#{$desktopxxl}){
+        @content;
+    }
+}
+
+@mixin desktopm {
+    @media(min-width:#{$desktopm}){
+        @content;
+    }
+}

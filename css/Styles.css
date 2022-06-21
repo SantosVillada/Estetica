@@ -247,22 +247,28 @@ iframe {
   align-items: center; }
   .enlaceArchivero-col-2 .col-2-section-1 {
     text-align: center; }
+  .enlaceArchivero-col-2 div {
+    background-color: #feeafa;
+    background-repeat: no-repeat; }
   @media (min-width: 1200px) {
     .enlaceArchivero-col-2 {
-      padding-top: 5rem; }
+      padding-top: 5rem;
+      /* .col-2-section-2 {
+            width: fit-content;
+        } */ }
       .enlaceArchivero-col-2 div {
-        width: 80%;
-        /* Flexbox */
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start; }
+        width: 90%;
+        padding: 1rem 1rem; } }
+    @media (min-width: 1200px) and (min-width: 768px) {
+      .enlaceArchivero-col-2 div {
+        width: 100%;
+        background-image: url(../multimedia/manicura-rusa.jpg); } }
+    @media (min-width: 1200px) and (min-width: 1350px) {
+      .enlaceArchivero-col-2 div {
+        width: 60%; } }
+  @media (min-width: 1200px) {
       .enlaceArchivero-col-2 .col-2-section-1 {
-        width: 40%; }
-      .enlaceArchivero-col-2 .col-2-section-2 {
-        width: fit-content; }
-      .enlaceArchivero-col-2 iframe {
-        width: 60rem; } }
+        width: 50%; } }
 
 .col-2-article-1 h2 {
   font-family: "Merriweather"; }
