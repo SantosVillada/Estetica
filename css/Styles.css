@@ -30,6 +30,10 @@ p {
     font-family: "Merriweather";
     font-weight: 800; }
 
+@media (min-width: 1350px) {
+  .logo-section {
+    width: 80%; } }
+
 /* <------- Main-col-1 --------> */
 .main {
   margin-top: 2rem;
@@ -319,7 +323,13 @@ iframe {
   background-color: #feeafa7e; }
   .enlace-col-2 article {
     text-align: center; }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
+    .enlace-col-2 section article iframe {
+      width: 450px; } }
+  @media (min-width: 768px) {
+    .enlace-col-2 section article iframe {
+      width: 800px; } }
+  @media (min-width: 1350px) {
     .enlace-col-2 div {
       display: flex;
       flex-direction: row-reverse;

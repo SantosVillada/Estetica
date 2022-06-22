@@ -40,6 +40,11 @@ p {
     }
 }
 
+@include desktopxxl {
+    .logo-section{
+        width: 80%;
+    }
+}
 
 
 /* <------- Main-col-1 --------> */
@@ -459,7 +464,27 @@ iframe {
         text-align: center;
     }
 
-    @include desktop {
+    @include desktopm{
+        section{
+            article{
+                iframe{
+                    width: 450px;
+                }
+            }
+        }
+    }
+
+    @include desktopm{
+        section{
+            article{
+                iframe{
+                    width: 800px;
+                }
+            }
+        }
+    }
+
+    @include desktopxxl {
         div {
             display: flex;
             flex-direction: row-reverse;
